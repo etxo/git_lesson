@@ -1,0 +1,4 @@
+docker run -d --network host --name mysql-local -e MYSQL_ROOT_PASSWORD=prosto --restart always mysql:8.0.35-debian
+
+docker run --name myadmin -d -e PMA_PORT=3306 -e PMA_HOST=172.17.0.2 -p 8081:80 --restart always phpmyadmin
+
